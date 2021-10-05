@@ -1,0 +1,35 @@
+ul.menu li {
+    display: inline;
+    margin: 2px;
+}
+ul.menu {
+    float: right;
+}
+a {
+    text-decoration:none;
+    color: blueviolet;
+}
+
+h1{
+    text-align: center;
+    color: red;
+}
+
+.header {
+    text-align: left;
+    color: red;
+}
+
+hr {
+    border-color: tomato;
+}
+
+
+body{
+    color: white; 
+}
+
+.spisok{
+    margin: 2px;
+    display: inline;
+}
