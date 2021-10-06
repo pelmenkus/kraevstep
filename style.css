@@ -1,0 +1,42 @@
+ul.menu li {
+    display: inline;
+    margin: 2px;
+}
+ul.menu {
+    float: right;
+}
+a {
+    text-decoration:none;
+    color: blueviolet;
+}
+
+h1{
+    text-align: center;
+    color: red;
+    font-family: 'Arial', sans-serif;
+    font-size: 25px;
+}
+
+.header {
+    text-align: right;
+    color: red;
+}
+
+hr {
+    border-color: blueviolet;
+}
+
+
+body{
+    color: white; 
+}
+
+.spisok{
+    margin: 2px;
+    text-align: center;
+    display: inline-block;
+}
+
+.futer{
+    text-align: center;
+}
