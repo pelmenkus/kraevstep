@@ -18,7 +18,7 @@ h1{
 }
 
 .header {
-    text-align: left;
+    text-align: right;
     color: red;
 }
 
@@ -35,4 +35,8 @@ body{
     margin: 2px;
     text-align: center;
     display: inline-block;
+}
+
+.futer{
+    text-align: center;
 }
