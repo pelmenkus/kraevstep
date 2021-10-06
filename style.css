@@ -33,5 +33,6 @@ body{
 
 .spisok{
     margin: 2px;
-    display: inline;
+    text-align: center;
+    display: inline-block;
 }
