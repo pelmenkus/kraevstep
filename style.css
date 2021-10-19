@@ -2,6 +2,20 @@ ul.menu li {
     display: inline;
     margin: 2px;
 }
+
+html,body{
+    background-color: black;
+}
+
+@media screen and (max-width: 1024px) {
+    body{
+        background-color: burlywood;
+    }
+    html{
+        background-color: burlywood;
+    }
+}
+
 ul.menu {
     float: right;
 }
@@ -18,7 +32,7 @@ h1{
 }
 
 .header {
-    text-align: right;
+    text-align: left;
     color: red;
 }
 
@@ -31,12 +45,31 @@ body{
     color: white; 
 }
 
+.content:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.content{
+    margin: 30px;
+    display: inline-block;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .spisok{
     margin: 2px;
     text-align: center;
-    display: inline-block;
+    text-decoration: none;
 }
 
 .futer{
     text-align: center;
+    list-style-type: none;
+}
+
+.stranichka{
+    text-align: center;
+
 }
