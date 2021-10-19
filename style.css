@@ -3,8 +3,12 @@ ul.menu li {
     margin: 2px;
 }
 
-html,body{
+body{
     background-color: black;
+}
+
+.prev{
+    background: url(fon.jpg);
 }
 
 @media screen and (max-width: 1024px) {
@@ -16,6 +20,18 @@ html,body{
     }
 }
 
+a {
+    color: #008000; /* Цвет обычной ссылки */ 
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+   }
+   a:visited {
+    color: blueviolet; /* Цвет посещённой ссылки */
+   } 
+   a:hover {
+    color: red; /* Цвет ссылки при наведении на нее курсора мыши */  
+    text-decoration: underline; /* Добавляем подчеркивание */
+   }
+
 ul.menu {
     float: right;
 }
@@ -26,7 +42,7 @@ a {
 
 h1{
     text-align: center;
-    color: red;
+    color: white;
     font-family: 'Arial', sans-serif;
     font-size: 25px;
 }
