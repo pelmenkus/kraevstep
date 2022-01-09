@@ -1,14 +1,8 @@
 import sqlite3
-print('NOW GO TO THE UNITTEST')
-
-import unittest
 
 class DB:
-    def __init__(self, path: str):
-        self.connection = sqlite3.connect(path)
-
-    def cursor(self):
-        return self.cursor
+    def __init__(self):
+        self.connection = sqlite3.connect("basadannih.db")
 
     def newCursor(self):
         self.cursor = self.connection.cursor()
@@ -44,7 +38,3 @@ class DB:
         self.cursor.execute(zap3)
         return self.cursor.fetchall()
 
-
-check=DB("basadannih.db")
-check.newCursor()
-print(check.get3())

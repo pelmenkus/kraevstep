@@ -1,23 +1,31 @@
 from requests import DB
 import unittest
 
-class TestTable(unittest.TestCase):
+class Testdb(unittest.TestCase):
 
     @classmethod
-    def setupClass(cls) -> None:
-        cls.db = DB("basadannih.db")
+    def setUpClass(cls) -> None:
+        cls.db = DB()
 
     @classmethod
-    def TearDownClass(cls) -> None:
+    def tearDownClass(cls) -> None:
         cls.db.DbClose()
 
-    def SetUp(self):
+    def setUp(self):
         self.db.newCursor()
 
     def tearDown(self):
         self.db.closeCursor()
 
     def test1(self):
+        res=[(3,)]
+        self.assertEqual(res,self.db.get1())
+
+    def test2(self):
+        res=[('2020',), ('2005',)]
+        self.assertEqual(res,self.db.get2())
+
+    def test3(self):
         res=[('klown',)]
         self.assertEqual(res,self.db.get3())
 
