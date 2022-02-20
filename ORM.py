@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-
+from init import *
 app = Flask(__name__) # объект приложения Flask
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db' # привязываем базу данных
 db = SQLAlchemy(app)
@@ -33,25 +33,13 @@ class Users(db.Model):
     def __repr__(self):
         return f'{self.id} {self.steamlogin}'
 
-db.create_all()
+class Feedback(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(80), nullable=False)
+    text = db.Column(db.String(256))
 
-user = Users(user= 1, steamlogin="klown", steamURL='fgdjfkhsaf', Balance=100)
-user2 = Users(user= 2, steamlogin="maksim_durak", steamURL='fgdjfkhsasffgafqfqfqfaf', Balance=500)
-it1 = Items(name='AWP | POW', price=5400, inability=1)
-it2 = Items(name='KNIFE | LORE', price=10000, inability=1)
-pokupka= ShopingCard(id=1, item=1)
-pokupka2= ShopingCard(id=2, item=2)
-
-
-
-db.session.add(user)
-db.session.add(user2)
-db.session.add(it1)
-db.session.add(it2)
-db.session.add(pokupka)
-db.session.add(pokupka2)
-
-db.session.commit()
+    def __repr__(self):
+        return f'{self.id} {self.text}'
 
 print(Users.query.all())
 print(Items.query.all())

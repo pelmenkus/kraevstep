@@ -1,6 +1,6 @@
 from flask import *
-
-app = Flask(__name__)
+from ORM import *
+from init import *
 
 @app.route('/')
 def main_page():
@@ -13,10 +13,6 @@ def katalog_page():
 @app.route('/stim')
 def loginsteam():
     return render_template("stim.html")
-
-@app.route('/otzovik')
-def usless_page():
-    return render_template("otzovik.html")
 
 @app.route('/knife')
 def item1():
@@ -33,5 +29,19 @@ def item3():
 @app.route('/SDOskam')
 def sdo():
     return render_template("SDOskam.html")
+
+@app.route('/otzovik', methods=['GET', 'POST'])
+def about():
+    feedback = Feedback.query.all()
+    if request.method == 'POST':
+        login = request.form.get('login')
+        text = request.form.get('text')
+        if login != '' and text != '':
+            f = Feedback(name=login, text=text)
+            db.session.add(f)
+            db.session.commit()
+            feedback.append(f)
+    print(feedback)
+    return render_template('otzovik.html', feedback=feedback)
 
 app.run(debug=True)
