@@ -41,8 +41,6 @@ class Feedback(db.Model):
     def __repr__(self):
         return f'{self.id} {self.text}'
 
-print(Users.query.all())
-print(Items.query.all())
 
 
 
