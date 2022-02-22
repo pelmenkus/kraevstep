@@ -4,16 +4,12 @@ ul.menu li {
 }
 
 body{
-    background-color: black;
-}
-
-.prev{
     background: url(prev.jpg) !important;
 }
 
 @media screen and (max-width: 1024px) {
     body{
-        background-color: burlywood;
+        background: url(prev.jpg);
     }
     html{
         background-color: burlywood;
