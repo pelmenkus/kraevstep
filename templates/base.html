@@ -15,7 +15,14 @@
             <h1>Добро пожаловать в мини магазин скинов из Counter-Strike: Global Offensive</h1> <br>
             <img src = '/static/previu2.jpg' width="160" height="160"> 
             <ul class="menu">
-                <a href="/stim"> <li>Войти в аккаунт стим <br> </li> </a>
+                {% if not session['login'] %}
+                    <a href="/login"> <li>Войти в аккаунт стим<br> </li> </a>
+                {% else %}
+                    <a href="/profile"> <li>{{ session['login'] }}<br> </li> </a>
+                    <a href="/logout"> <li>Выйти из аккаунта<br> </li> </a>
+                {% endif %}
+                
+                
                 <a href="/otzovik"> <li>Отзывы </li> </a>
             </ul>
         </div>

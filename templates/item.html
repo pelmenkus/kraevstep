@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="spisok">
+        <h3>{{item.name}}</h3>
+        <img src="/static/{{item.photo_url}}" width="320" height="350">
+        <h3>{{item.inability}}</h3>
+        <br>
+        <form method="POST">
+            <input type="number" step="1" min="1" max="{{ item.amount }}" id="num_count" name="quantity" value="1" title="Qty">
+            <button type="submit" class="btn btn-outline-dark py-3">Купить!</button>
+        </form>
+    </div>
+{% endblock %}
