@@ -2,6 +2,10 @@ from flask import *
 from ORM import *
 from init import *
 
+@app.route("/404")
+def render_404():
+    return render_template("404.html")
+
 @app.route('/')
 def main_page():
     return render_template("glavnaya.html")
