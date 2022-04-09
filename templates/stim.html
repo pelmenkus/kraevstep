@@ -285,6 +285,15 @@
 						<div class="login_title">Войти</div>
 
 						<div id="error_display" class="checkout_error" style="display: none;"></div>
+						<div class="container">
+							{% for category, mesg in get_flashed_messages(with_categories=true) %}
+								{% if category == 'warning' %}
+									<h6 class="text-center" style="color: red;">{{ mesg }}</h1>
+								{% else %}
+									<h6 class="text-center" style="color: green;">{{ mesg }}</h1>
+								{% endif %}
+							{% endfor %}    
+						</div>
 						<form name="logon" action="" method="POST" id="login_form" style="display: block;">
 							<div class="login_row">
 								<div class="input_title">Имя аккаунта Steam</div>

@@ -12,6 +12,9 @@ class Items(db.Model):
 
     def __repr__(self):
         return f'itemcheck {self.name} {self.price}'
+    
+    def dec_amount(self, quantity):
+        self.inability -= quantity
 
 class Users(db.Model):
     id = db.Column(db.Integer, unique=True, primary_key=True)
@@ -95,10 +98,10 @@ def create_db():
     db.create_all()
 
 def get_product_by_url(name):
-    return Items.query.filter(Items.name == name).one()
+    return Items.query.filter(Items.photo_url == name + '.jpg').one()
 
 def get_product_id_by_url(name):
-    return Items.query.filter(Items.name == name).one().id
+    return Items.query.filter(Items.photo_url == name + '.jpg').one().id
 
 def get_products():
     return Items.query.all()
@@ -107,7 +110,7 @@ def get_reviews():
     return Feedback.query.all()
 
 def get_cart_for_user(user_id):
-    return Cart.query.filter(User.id == user_id)
+    return Cart.query.filter(Users.id == user_id)
 
 def disable_cart_for_user(user_id):
     cart = get_cart_for_user(user_id)

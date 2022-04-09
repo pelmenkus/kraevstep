@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="main">
+        <div class="container">
+            <form method="POST">
+                <h3>Сменить пароль</h3>
+                <input type="password" class="form-control" name="old_password" placeholder="Старый пароль">
+                <input type="password" class="form-control"  name="new_password" placeholder="Новый пароль">
+                <div>
+                    <button type="submit" class="btn login-button btn-outline-warning py-3">Сменить пароль</button>
+                </div>
+            </form>
+        </div>
+
+        
+        <h3>Корзина</h3>
+        {% if cart %}
+            {% for cart_item in cart %}
+                {% if cart_item.is_visible %}
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm">
+                                <h4>{{ cart_item.product_name }}</h4>                        
+                            </div>
+                            <div class="col-sm">
+                                <h4>{{ cart_item.amount }} шт.</h4>
+                            </div>
+                            <div class="col-sm">
+                                <h4>{{ cart_item.amount * cart_item.price }} руб.</h4>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        
+        {% if total_price > 0 %}
+            <h4>Общая цена: {{total_price}} руб.</h4>
+            <div>
+                <form method="POST" action="/buy/{{session.login}}">
+                    <button type="submit" class="btn btn-outline-dark py-3">Купить</button>
+                </form>
+            </div>
+        {% else %}
+            <h4>Ваша корзина пуста</h4>
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,23 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
     <div class="spisok">
+        {% for item in items %}
         <div class="content">
-            <a href="/avik">
-                AWP | Азимов <br>
-                <img src="https://sun9-11.userapi.com/impf/m-UKDVn3n0O3epOT-DKFblYFVYZg_yrhjj3nTg/uOlkNW_TSeY.jpg?size=351x343&quality=96&sign=66b125ad88fcd8716009855f1fa7b3ff&type=album" width="320" height="350"> <br> 3500 руб <hr> <br> 
+            <a href="/products/{{item.photo_url.split('.')[0]}}">
+                {{ item.name }} <br>
+                <img src="/static/{{item.photo_url}}" width="320" height="350"> <br> {{item.price}} руб <hr> <br> 
             </a>
         </div> 
-        <div class="content">
-            <a href="/knife"> 
-                Нож с лезвием-крюком | Гамма-волны <br>
-                <img src="https://sun9-49.userapi.com/impf/c851128/v851128416/734d5/22haISi7Uoc.jpg?size=360x360&quality=96&sign=19000a7760010a92695756579a081c5b&type=album" width="320" height="350"> <br> 9000 руб <hr> <br> 
-            </a>
-        </div>
-        <div class="content">
-            <a href="/kalash">
-                st. AK-47 | Аквамариновая месть<br>
-                <img src = '/static/kalash.jpg' width="320" height="350"> <br> 6000 руб <hr> <br> 
-            </a>
-        </div>
+        {% endfor %}
     </div>
 {% endblock %}
