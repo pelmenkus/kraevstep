@@ -4,16 +4,12 @@ ul.menu li {
 }
 
 body{
-    background-color: black;
-}
-
-.prev{
     background: url(prev.jpg) !important;
 }
 
 @media screen and (max-width: 1024px) {
     body{
-        background-color: burlywood;
+        background: url(prev.jpg);
     }
     html{
         background-color: burlywood;
@@ -89,4 +85,20 @@ body{
 .stranichka{
     text-align: center;
 
+}
+
+.feedback{
+    text-align: left;
+    margin: 10px;
+    flex-wrap: wrap;
+}
+
+.prev{
+    text-align: left;
+    margin: 2px;
+    
+}
+
+.form-control{
+    width: 510px!important;
 }

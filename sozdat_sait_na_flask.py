@@ -30,7 +30,7 @@ def item2():
 def item3():
     return render_template("kalash.html")
 
-@app.route('/SDOskam')
+@app.route('/SDOskam.html')
 def sdo():
     return render_template("SDOskam.html")
 

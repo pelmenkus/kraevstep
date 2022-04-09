@@ -1,8 +1,10 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from init import *
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
+import hashlib
+from init import db
+
+app = Flask(__name__) # объект приложения Flask
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db' # привязываем базу данных
 db = SQLAlchemy(app)
 
 class Items(db.Model):
@@ -39,8 +41,6 @@ class Feedback(db.Model):
     text = db.Column(db.String(256))
 
     def __repr__(self):
-        return f'{self.id} {self.text}'
+        return f'feedback name: {self.name}'
 
-
-
-
+db.create_all()
