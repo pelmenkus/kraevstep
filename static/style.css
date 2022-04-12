@@ -24,7 +24,7 @@ a {
     color: blueviolet; /* Цвет посещённой ссылки */
    } 
    a:hover {
-    color: red; /* Цвет ссылки при наведении на нее курсора мыши */  
+    color: rgb(152, 240, 144); /* Цвет ссылки при наведении на нее курсора мыши */  
     text-decoration: underline; /* Добавляем подчеркивание */
    }
 
@@ -33,6 +33,7 @@ ul.menu {
 }
 a {
     text-decoration:none;
+    font-size: x-large;
     color: blueviolet;
 }
 
@@ -65,7 +66,7 @@ body{
 }
 
 .content{
-    margin: 30px;
+    margin-top: 30px;
     display: inline-block;
     flex-wrap: wrap;
     justify-content: center;
@@ -101,4 +102,8 @@ body{
 
 .form-control{
     width: 510px!important;
+}
+
+.button{
+    color: yellow
 }
