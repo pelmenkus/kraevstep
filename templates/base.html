@@ -11,33 +11,34 @@
 
     <body>
         <div class="prev">
-        <div class="header">
-            <div class="container">
-                {% for category, mesg in get_flashed_messages(with_categories=true) %}
-                    {% if category == 'warning' %}
-                        <h6 class="text-center" style="color: red;">{{ mesg }}</h1>
+            <div class="header">
+                <div class="container">
+                    {% for category, mesg in get_flashed_messages(with_categories=true) %}
+                        {% if category == 'warning' %}
+                            <h6 class="text-center" style="color: red;">{{ mesg }}</h1>
+                        {% else %}
+                            <h6 class="text-center" style="color: green;">{{ mesg }}</h1>
+                        {% endif %}
+                    {% endfor %}    
+                </div>
+                <h1>Добро пожаловать в мини магазин скинов из Counter-Strike: Global Offensive</h1> <br>
+                <img src = '/static/previu2.jpg' width="160" height="160"> 
+                <ul class="menu">
+                    {% if not session['login'] %}
+                        <a href="/login"> <li>Войти в аккаунт стим<br> </li> </a>
                     {% else %}
-                        <h6 class="text-center" style="color: green;">{{ mesg }}</h1>
+                        <a href="/{{ session['login'] }}"> <li>{{ session['login'] }}<br> </li> </a>
+                        <a href="/logout"> <li>Выйти из аккаунта<br> </li> </a>
                     {% endif %}
-                {% endfor %}    
+                    
+                    
+                    <a href="/otzovik"> <li>Отзывы </li> </a>
+                </ul>
             </div>
-            <h1>Добро пожаловать в мини магазин скинов из Counter-Strike: Global Offensive</h1> <br>
-            <img src = '/static/previu2.jpg' width="160" height="160"> 
-            <ul class="menu">
-                {% if not session['login'] %}
-                    <a href="/login"> <li>Войти в аккаунт стим<br> </li> </a>
-                {% else %}
-                    <a href="/{{ session['login'] }}"> <li>{{ session['login'] }}<br> </li> </a>
-                    <a href="/logout"> <li>Выйти из аккаунта<br> </li> </a>
-                {% endif %}
-                
-                
-                <a href="/otzovik"> <li>Отзывы </li> </a>
-            </ul>
         </div>
-        {% block content %} {% endblock %}
-        <div class="futer">
-            <a href="/"> На главную <hr> </a>
-        </div></div>
     </body>
+    {% block content %} {% endblock %}
+    <footer>
+        <a href="/"> На главную<br> </a>
+    </footer>
 </html>
