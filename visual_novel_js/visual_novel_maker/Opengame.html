@@ -27,7 +27,7 @@
     <div class='col-lg-2 col-md-12 col-sm-12'>
         <div id='menu'>
             <div id='title'>
-                <h2> simple 'visual novel' thingy </h2>
+                <h2> visual novel </h2>
             </div>
             <p><b>instructions:</b> after selecting a game and clicking the start button, press spacebar (or double-tap if on mobile) to traverse the scenes.</p>
             <p>to change games after selecting one, please refresh the page first!</p>
@@ -106,7 +106,7 @@ $(document).ready(function(){
     Screen.menuScreen("artAssets/56.png", "col");
     Screen.setDialogBox("artAssets/dialogBar.png");
 
-    // mr cats neighborhood
+
     $('#game').click(function(){
         var curGame = document.getElementsByTagName("script")[4].getAttribute("src");
         if(curGame !== "demos/tokyo.js"){
