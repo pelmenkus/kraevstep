@@ -1,0 +1,10 @@
+C:\Users\Stepa\Documents\GitHub\kraevstep\summerust\my-project\target\debug\deps\structopt_derive-be094600d7f57ff2.dll: C:\Users\Stepa\.cargo\registry\src\index.crates.io-6f17d22bba15001f\structopt-derive-0.4.18\src\lib.rs C:\Users\Stepa\.cargo\registry\src\index.crates.io-6f17d22bba15001f\structopt-derive-0.4.18\src\attrs.rs C:\Users\Stepa\.cargo\registry\src\index.crates.io-6f17d22bba15001f\structopt-derive-0.4.18\src\doc_comments.rs C:\Users\Stepa\.cargo\registry\src\index.crates.io-6f17d22bba15001f\structopt-derive-0.4.18\src\parse.rs C:\Users\Stepa\.cargo\registry\src\index.crates.io-6f17d22bba15001f\structopt-derive-0.4.18\src\spanned.rs C:\Users\Stepa\.cargo\registry\src\index.crates.io-6f17d22bba15001f\structopt-derive-0.4.18\src\ty.rs
+
+C:\Users\Stepa\Documents\GitHub\kraevstep\summerust\my-project\target\debug\deps\structopt_derive-be094600d7f57ff2.d: C:\Users\Stepa\.cargo\registry\src\index.crates.io-6f17d22bba15001f\structopt-derive-0.4.18\src\lib.rs C:\Users\Stepa\.cargo\registry\src\index.crates.io-6f17d22bba15001f\structopt-derive-0.4.18\src\attrs.rs C:\Users\Stepa\.cargo\registry\src\index.crates.io-6f17d22bba15001f\structopt-derive-0.4.18\src\doc_comments.rs C:\Users\Stepa\.cargo\registry\src\index.crates.io-6f17d22bba15001f\structopt-derive-0.4.18\src\parse.rs C:\Users\Stepa\.cargo\registry\src\index.crates.io-6f17d22bba15001f\structopt-derive-0.4.18\src\spanned.rs C:\Users\Stepa\.cargo\registry\src\index.crates.io-6f17d22bba15001f\structopt-derive-0.4.18\src\ty.rs
+
+C:\Users\Stepa\.cargo\registry\src\index.crates.io-6f17d22bba15001f\structopt-derive-0.4.18\src\lib.rs:
+C:\Users\Stepa\.cargo\registry\src\index.crates.io-6f17d22bba15001f\structopt-derive-0.4.18\src\attrs.rs:
+C:\Users\Stepa\.cargo\registry\src\index.crates.io-6f17d22bba15001f\structopt-derive-0.4.18\src\doc_comments.rs:
+C:\Users\Stepa\.cargo\registry\src\index.crates.io-6f17d22bba15001f\structopt-derive-0.4.18\src\parse.rs:
+C:\Users\Stepa\.cargo\registry\src\index.crates.io-6f17d22bba15001f\structopt-derive-0.4.18\src\spanned.rs:
+C:\Users\Stepa\.cargo\registry\src\index.crates.io-6f17d22bba15001f\structopt-derive-0.4.18\src\ty.rs:

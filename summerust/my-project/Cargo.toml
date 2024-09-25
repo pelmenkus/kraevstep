@@ -1,0 +1,11 @@
+[package]
+name = "my-project"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+tokio-postgres = "0.7"
+structopt = "0.3"
+clap = { version = "4", features = ["derive"] }
